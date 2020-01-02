@@ -54,19 +54,19 @@ ex)
 **쿼리수정** 
 
 ```sql
-SELECT p.no, ....., t_name
+SELECT p.no, ....., t.name
 FROM t_posts p, t_tags t, t_tag_post pt
 WHERE p.no = pt.post_no
 and t.no = pt.tag_no
-AND pt_tag_no = {{no}}
+AND pt.tag_no = {{no}}
 ```
 
 ```sql
-SELECT p.no, ....., t_name
+SELECT p.no, ....., t.name
 FROM t_posts p, t_tags t, t_tag_post pt
 WHERE p.no = pt.post_no
 and t.no = pt.tag_no
-AND pt_tag_no in ( {{no1}}, {{no2}} )
+AND pt.tag_no in ( {{no1}}, {{no2}} )
 GROUP BY pt.post_no
 HAVING ( COUNT(pt.tag_no) = {{선택 태그 개수}} )
 ```
