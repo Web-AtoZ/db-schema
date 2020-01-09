@@ -79,7 +79,63 @@ HAVING ( COUNT(pt.tag_no) = {{선택 태그 개수}} )
 
 
 
+<br>
 
+
+
+# 4 결과
+
+#### [ tag & post ]
+
+**t_tags**
+
+| column | type    | description |
+| ------ | ------- | ----------- |
+| id     | INT     | PK          |
+| name   | VARCHAR | 태그 네임   |
+
+**t_tag_post**
+
+| column  | type | description |
+| ------- | ---- | ----------- |
+| tag_id  | INT  | t_tags PK   |
+| post_id | INT  | t_posts PK  |
+
+> 사용자가 태그 걸 때 t_tags에 있는 태그면 pass, 없으면 insert 
+
+**t_post**
+
+| column | type | description |
+| ------ | ---- | ----------- |
+| id     | INT  | PK          |
+| ...    | ...  | ...         |
+
+<br>
+
+#### [ tag & comment ]
+
+**t_tags**
+
+| column | type | description |
+| ------ | ---- | ----------- |
+| id     | INT  | PK          |
+| name   |      |             |
+
+**t_tag_comment**
+
+| column     | type | description   |
+| ---------- | ---- | ------------- |
+| tag_id     | INT  | t_tags PK     |
+| comment_id | INT  | t_comments PK |
+
+> 사용자가 태그 걸 때 t_tags에 있는 태그면 pass, 없으면 insert 
+
+**t_comments**
+
+| column | type | description |
+| ------ | ---- | ----------- |
+| id     | INT  | PK          |
+| ...    | ...  | ...         |
 
 
 
