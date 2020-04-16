@@ -137,7 +137,7 @@ COMMENT ON COLUMN "sns_info"."user_id" IS 'user_id';
 -- anonymous
 CREATE TABLE "anonymous"
 (
-	"anoymous_id"  SERIAL    NOT NULL, -- anoymous_id
+	"anoymous_id"  SERIAL    NOT NULL, -- anonymous_id
 	"name"         VARCHAR   NULL,     -- name
 	"secret"       VARCHAR   NULL,     -- secret
 	"created_date" TIMESTAMP NULL,     -- created_date
